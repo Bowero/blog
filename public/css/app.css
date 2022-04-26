@@ -379,6 +379,110 @@ Ensure the default browser behavior of the `hidden` attribute.
 [hidden] {
   display: none;
 }
+    body {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+    @media (min-width: 768px) {
+
+  body {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+    p {
+  margin-bottom: 2rem;
+}
+
+    ol {
+  margin-bottom: 2rem;
+  list-style-type: decimal;
+  padding-left: 1.25rem;
+}
+
+    ul {
+  margin-bottom: 2rem;
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+    pre {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+    a {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+    h1 {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+    @media (min-width: 768px) {
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+    h2 {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+
+    @media (min-width: 768px) {
+
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+    h3 {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+    @media (min-width: 768px) {
+
+  h3 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+    h4 {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+    @media (min-width: 768px) {
+
+  h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 
 *, ::before, ::after {
   --tw-translate-x: 0;
@@ -461,11 +565,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
   margin-right: auto;
 }
-.mt-24 {
-  margin-top: 6rem;
-}
 .mt-8 {
   margin-top: 2rem;
+}
+.mt-16 {
+  margin-top: 4rem;
+}
+.mb-0 {
+  margin-bottom: 0px;
 }
 .min-h-full {
   min-height: 100%;
@@ -473,14 +580,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-5xl {
   max-width: 64rem;
 }
+.max-w-4xl {
+  max-width: 56rem;
+}
 .max-w-3xl {
   max-width: 48rem;
 }
 .max-w-2xl {
   max-width: 42rem;
-}
-.max-w-lg {
-  max-width: 32rem;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -502,23 +609,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
-.pt-32 {
-  padding-top: 8rem;
-}
-.pt-24 {
-  padding-top: 6rem;
+.pt-16 {
+  padding-top: 4rem;
 }
 .pt-10 {
   padding-top: 2.5rem;
 }
-.pt-8 {
-  padding-top: 2rem;
-}
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 .text-4xl {
   font-size: 2.25rem;
@@ -532,18 +630,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 .font-bold {
   font-weight: 700;
-}
-.font-light {
-  font-weight: 300;
-}
-.leading-relaxed {
-  line-height: 1.625;
 }
 .text-gray-300 {
   --tw-text-opacity: 1;
@@ -561,19 +657,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
+
 @media (min-width: 768px) {
+
+  .md\:mt-16 {
+    margin-top: 4rem;
+  }
 
   .md\:rounded-lg {
     border-radius: 0.5rem;
-  }
-
-  .md\:p-10 {
-    padding: 2.5rem;
-  }
-
-  .md\:py-40 {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
   }
 
   .md\:px-10 {
@@ -581,8 +673,13 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-right: 2.5rem;
   }
 
-  .md\:pt-40 {
+  .md\:py-40 {
     padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  .md\:pt-24 {
+    padding-top: 6rem;
   }
 
   .md\:text-6xl {
@@ -595,35 +692,26 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 2.5rem;
   }
 
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
+
 @media (min-width: 1024px) {
 
-  .lg\:p-12 {
-    padding: 3rem;
+  .lg\:mt-24 {
+    margin-top: 6rem;
   }
 
   .lg\:px-12 {
@@ -643,21 +731,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .lg\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
-  .lg\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
   }
 
   .lg\:text-2xl {
