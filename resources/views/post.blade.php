@@ -1,10 +1,10 @@
 <x-layout>
 
     <div class="text-gray-300 container mx-auto p-8 overflow-hidden md:rounded-lg md:px-10 lg:px-12 py-32 md:py-40">
-        <h1 class="font-sans text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
+        <h1 class="font-sans text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl" style="margin: 0;">
             {{ $metadata['title'] }}
         </h1>
-        <h2 class="font-sans text-2xl font-bold text-gray-400 max-w-5xl lg:text-5xl lg:pr-24 md:text-4xl mt-8">
+        <h2 class="font-sans text-2xl font-bold text-gray-400 max-w-5xl lg:text-5xl lg:pr-24 md:text-4xl mt-8" style="margin-bottom: 0;">
             {{ $metadata['subtitle'] }}
         </h2>
         <div class="mt-8">
