@@ -568,14 +568,35 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-8 {
   margin-top: 2rem;
 }
-.mt-6 {
-  margin-top: 1.5rem;
-}
 .mt-16 {
   margin-top: 4rem;
 }
 .mb-0 {
   margin-bottom: 0px;
+}
+.mr-4 {
+  margin-right: 1rem;
+}
+.mr-8 {
+  margin-right: 2rem;
+}
+.ml-4 {
+  margin-left: 1rem;
+}
+.flex {
+  display: flex;
+}
+.h-24 {
+  height: 6rem;
+}
+.h-8 {
+  height: 2rem;
+}
+.h-4 {
+  height: 1rem;
+}
+.h-6 {
+  height: 1.5rem;
 }
 .min-h-full {
   min-height: 100%;
@@ -592,6 +613,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-w-2xl {
   max-width: 42rem;
 }
+.flex-1 {
+  flex: 1 1 0%;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -605,18 +629,52 @@ Ensure the default browser behavior of the `hidden` attribute.
 .to-black {
   --tw-gradient-to: #000;
 }
+.fill-gray-300 {
+  fill: #d1d5db;
+}
+.fill-gray-600 {
+  fill: #4b5563;
+}
+.fill-gray-400 {
+  fill: #9ca3af;
+}
 .p-8 {
   padding: 2rem;
+}
+.p-4 {
+  padding: 1rem;
 }
 .py-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .pt-16 {
   padding-top: 4rem;
 }
 .pt-10 {
   padding-top: 2.5rem;
+}
+.pt-8 {
+  padding-top: 2rem;
+}
+.pl-8 {
+  padding-left: 2rem;
 }
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -656,18 +714,36 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
-@media (min-width: 768px) {
 
-  .md\:mt-8 {
-    margin-top: 2rem;
-  }
+.hover\:fill-white:hover {
+  fill: #fff;
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
 
   .md\:mt-16 {
     margin-top: 4rem;
+  }
+
+  .md\:ml-8 {
+    margin-left: 2rem;
   }
 
   .md\:rounded-lg {
@@ -713,6 +789,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     line-height: 2rem;
   }
 }
+
 @media (min-width: 1024px) {
 
   .lg\:mt-24 {
