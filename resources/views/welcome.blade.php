@@ -1,7 +1,7 @@
 <x-layout>
 
     <div class="text-gray-300 container mx-auto p-8 overflow-hidden md:rounded-lg md:px-10 lg:px-12 py-32 md:py-40">
-        <h1 class="font-sans text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl">
+        <h1 class="font-sans text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl" style="margin: 0;">
             Hi there, beautiful!
         </h1>
 
@@ -29,14 +29,14 @@
                 href="https://twitter.com/RobinMartijn/" target="_blank" class="underline">Twitter</a>!
         </x-paragraph>
 
-        <h2 class="font-sans text-3xl font-bold text-gray-200 max-w-3xl lg:text-5xl lg:pr-24 md:text-4xl pt-16 md:pt-24">
+        <h2 class="font-sans text-3xl font-bold text-gray-200 max-w-3xl lg:text-5xl lg:pr-24 md:text-4xl pt-16 md:pt-24" style="margin: 0;">
             Recent posts
         </h2>
 
         <div class="container max-w-2xl">
             @foreach($posts as $post)
                 <div class="mt-8">
-                    <h3 class="font-sans text-lg font-bold text-gray-200 lg:text-2xl md:text-xl">
+                    <h3 class="font-sans text-lg font-bold text-gray-200 lg:text-2xl md:text-xl" style="margin: 0;">
                         <a href="{{ route('posts.show', $post['path']) }}" class="underline">
                             {{ $post['title'] }}
                             : {{ $post['subtitle'] }}
