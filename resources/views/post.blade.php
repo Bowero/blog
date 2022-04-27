@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="$metadata['title']" :subtitle="$metadata['subtitle']">
 
     <div class="text-gray-300 container mx-auto p-8 overflow-hidden md:rounded-lg md:px-10 lg:px-12 py-32 md:py-40">
         <h1 class="font-sans text-4xl font-bold text-gray-200 max-w-5xl lg:text-7xl lg:pr-24 md:text-6xl" style="margin: 0;">
