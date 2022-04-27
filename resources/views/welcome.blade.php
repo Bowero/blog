@@ -38,8 +38,7 @@
                 <div class="mt-8">
                     <h3 class="font-sans text-lg font-bold text-gray-200 lg:text-2xl md:text-xl" style="margin: 0;">
                         <a href="{{ route('posts.show', $post['path']) }}" class="underline">
-                            {{ $post['title'] }}
-                            : {{ $post['subtitle'] }}
+                            {{ $post['title'] }}: {{ $post['subtitle'] }}
                         </a>
                     </h3>
                     <span class="text-gray-400">
