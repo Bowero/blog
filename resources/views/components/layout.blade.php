@@ -14,7 +14,7 @@
 <div class="container mx-auto pt-8 overflow-hidden md:rounded-lg md:px-10 lg:px-12 px-8">
     <nav class="flex">
         <div class="py-4 flex-1">
-            <a href="/" class="text-gray-300 hover:text-white font-bold text-xl md:text-2xl">Robin Martijn</a>
+            <a href="/" class="text-gray-300 font-bold text-xl md:text-2xl">Robin Martijn</a>
         </div>
         <div class="py-4">
             <a href="https://twitter.com/RobinMartijn/" target="_blank">

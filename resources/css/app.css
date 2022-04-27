@@ -24,7 +24,7 @@
     }
 
     a {
-        @apply underline;
+        @apply underline hover:text-white;
     }
 
     h1 {
