@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="min-h-full">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
 
     <title>@isset($title){{ $title }} | @endisset Robin Martijn</title>
 
-    @isset($title)
-        <meta name="description" content="{{ $title }}@isset($subtitle): {{ $subtitle }} @endisset">
-    @endisset
+    <meta property="og:url" content="https://robinmartijn.nl/">
+    <meta property="og:image" content="https://actionless.app/facebook/{{ base64_encode(request()->url()) }}" />
+    <meta name="twitter:card" content="summary"></meta>
+    <meta property="twitter:image" content="https://actionless.app/twitter/{{ base64_encode(request()->url()) }}" />
+
+@isset($title)
+        <meta name="description" content="{{ $title }}@isset($subtitle): {{ $subtitle }} @endisset" />
+        <meta property="og:title" content="{{ $title }}" />
+
+    @isset($subtitle)
+            <meta property="og:description" content="{{ $subtitle }}" />
+        @endisset
+    @else
+        <meta property="og:title" content="Robin Martijn" />
+        <meta name="description" content="Robin Martijn is a freelance Laravel developer, writing about projects he's building and experiments he's running." />
+        <meta property="og:description" content="Robin Martijn is a freelance Laravel developer, writing about projects he's building and experiments he's running." />
+@endisset
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
