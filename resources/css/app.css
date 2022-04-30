@@ -24,7 +24,7 @@
     }
 
     a {
-        @apply underline hover:text-white;
+        @apply underline hover:text-gray-800 dark:hover:text-white;
     }
 
     h1 {
