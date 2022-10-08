@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="min-h-full dark">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="min-h-full">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -64,8 +64,8 @@
                 </svg>
             </a>
         </div>
-        <div class="py-4 hidden" id="dark-icon">
-            <a href="#" aria-label="Enable light mode" onclick="toggleDarkMode()">
+        <div class="py-4" id="dark-icon">
+            <a href="#" aria-label="Enable dark mode" onclick="toggleDarkMode()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                      class="h-8 ml-4 md:ml-8 fill-gray-600 hover:fill-gray-800 dark:fill-gray-300 dark:hover:fill-white">
                     <path
@@ -80,25 +80,30 @@
 
 <script>
     // Initialize dark mode based on cookie
-    if (document.cookie.indexOf('dark-mode=true') > -1) {
+    if (document.cookie.indexOf('dark-mode=true') > -1 ||
+        window.matchMedia('(prefers-color-scheme: dark)').matches) {
         setDarkMode();
-    } else if (document.cookie.indexOf('dark-mode=false') > -1) {
+    } else if (document.cookie.indexOf('dark-mode=false') > -1 ||
+        window.matchMedia('(prefers-color-scheme: light)').matches) {
         setLightMode();
     }
 
     function toggleDarkMode() {
-        if (document.getElementsByTagName('html')[0].classList.contains('dark')) {
-            setLightMode();
+        if (document.documentElement.classList.contains('dark')) {
+            setLightMode(true);
         } else {
-            setDarkMode();
+            setDarkMode(true);
         }
     }
 
-    function setDarkMode() {
-        document.getElementsByTagName('html')[0].classList.add('dark');
+    function setDarkMode(set_cookie = false) {
+        document.documentElement.classList.add('dark');
         document.getElementById('light-icon').classList.remove('hidden');
         document.getElementById('dark-icon').classList.add('hidden');
-        document.cookie = 'dark-mode=true; path=/';
+
+        if (set_cookie) {
+            document.cookie = 'dark-mode=true; path=/';
+        }
 
         // Update the code snippets
         var codeBlocks = document.getElementsByClassName('light-code');
@@ -112,11 +117,14 @@
         }
     }
 
-    function setLightMode() {
-        document.getElementsByTagName('html')[0].classList.remove('dark');
+    function setLightMode(set_cookie = false) {
+        document.documentElement.classList.remove('dark');
         document.getElementById('light-icon').classList.add('hidden');
         document.getElementById('dark-icon').classList.remove('hidden');
-        document.cookie = 'dark-mode=false; path=/';
+
+        if (set_cookie) {
+            document.cookie = 'dark-mode=false; path=/';
+        }
 
         // Update the code snippets
         var codeBlocks = document.getElementsByClassName('light-code');
@@ -129,7 +137,6 @@
             codeBlocks[i].classList.add('hidden');
         }
     }
-
 </script>
 
 </body>
